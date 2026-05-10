@@ -1,0 +1,315 @@
+/* responsiveness for tablet */
+
+@media (max-width: 768px) {
+
+
+  nav {
+
+    padding: 1rem 2rem;
+
+  }
+
+  .left-nav img {
+    width: 20%;
+  }
+
+
+  ul {
+    display: none;
+  }
+
+  .left-nav .fa-angle-down {
+    display: none;
+  }
+
+
+
+
+.center-nav {
+  gap: 2rem;
+
+}
+
+.center-nav-left {
+
+
+  width: 35%;
+
+}
+
+.center-nav-left img {
+
+  width: 40%;
+
+}
+
+.site-name {
+  font-size: 2rem;
+  color: white;
+}
+
+.main-body-right-container {
+  display: none;
+}
+
+.main-body-left-container {
+  padding: 2rem 3rem;
+}
+
+.main-body-left-first-line {
+  gap: 0.8rem;
+  font-size: 0.8rem;
+}
+
+
+/* gallery section */
+
+
+.gallery-section,
+.about-section,
+.highlights-section {
+  padding: 2rem 1rem;
+  max-width: 75rem;
+
+}
+
+.gallery-grid {
+
+
+  grid-template-columns: 2.7fr;
+
+
+}
+
+.gallery-grid>*:nth-child(2) {
+  display: none;
+}
+
+
+/* hotel tabs */
+.hotel-tabs {
+
+  gap: 1.7rem;
+
+}
+
+.hotel-tabs a {
+  font-size: 0.8rem;
+
+}
+
+/* about section */
+
+
+
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-description {
+
+  padding: 0;
+}
+
+
+.about-note-icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+
+}
+
+.about-note-icon p {
+  font-size: 1.3rem;
+}
+
+
+/* resort highlights */
+
+
+.highlights-feature-box {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.highlights-feature-box img {
+  width: 30rem;
+  height: 15rem;
+
+}
+}
+
+/* responsiveness for mobile */
+
+@media (max-width: 576px){
+
+    .left-nav img {
+    display: none;
+  }
+
+  .right-nav-left p {
+    display: none;
+  }
+
+
+  ul {
+    display: none;
+  }
+
+  .left-nav .fa-angle-down {
+    display: none;
+  }
+
+.main-body {
+    background-color: white;
+}
+
+.main-body-left-first-line {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.main-body-left-third-line {
+
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-body-left-third-line-elements {
+
+    font-size: 1rem;
+}
+
+/* gallery section */
+
+
+.gallery-grid {
+  
+   grid-template-columns: 2.7fr;
+
+    border-radius: 0;
+}
+
+
+.gallery-grid>*:nth-child(2) {
+  display: none;
+}
+
+.gallery-main {
+    position: relative;
+    height: 30rem;
+}
+
+
+
+
+/* hotel tabs */
+.hotel-tabs {
+    display: none;
+  
+}
+
+/* about section */
+
+
+.about-container ,.highlights-container{
+   
+    background-color: white;
+    border-radius:0;
+}
+
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.about-description {
+
+    padding: 0;
+}
+
+
+
+
+.about-property-note {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    
+}
+
+
+/* featured highlight  */
+
+
+
+.highlights-feature-box {
+   
+    padding: 0;
+}
+
+.highlights-feature-box img {
+    width: 25rem;
+  height: 15rem;
+  
+}
+
+.highlights-feature-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.highlights-feature-content p {
+    line-height: 1.7;
+    color: #555;
+    font-size: 1rem;
+}
+
+.highlights-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+ .highlights-cards-wrapper article {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.highlights-cards-wrapper article img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.highlights-card-content {
+    padding: 1.2rem;
+}
+
+.highlights-card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.highlights-card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+
+
+
+}
