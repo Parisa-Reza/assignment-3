@@ -4,8 +4,6 @@ const fs = require("fs");
 
 const app = express();
 
-app.use("/images", express.static(path.join(__dirname, "..", "images")));
-
 app.get("/images", (req, res) => {
   const imagesDirectory = path.join(__dirname, "..", "images");
 
@@ -24,5 +22,7 @@ app.get("/images", (req, res) => {
     res.json(imageFiles);
   });
 });
+
+app.use("/images", express.static(path.join(__dirname, "..", "images")));
 
 module.exports = app;

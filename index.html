@@ -141,44 +141,85 @@
 
 
             <section class="gallery-section">
-
+            
                 <div class="gallery-grid">
-
+            
                     <!-- main large image -->
                     <figure class="gallery-main">
                         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop"
                             alt="Luxury resort" />
-
+            
+                        <a href="#" class="gallery-button">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M9 3L7.17 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                            </svg>
+            
+                            <span>View all images (180)</span>
+                        </a>
                     </figure>
-
+            
                     <!-- Right Side Grid -->
                     <div class="gallery-side">
-
+            
                         <figure class="gallery-card">
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
                                 alt="Ocean view" />
                         </figure>
-
+            
                         <figure class="gallery-card">
                             <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
                                 alt="Restaurant seating" />
                         </figure>
-
+            
                         <figure class="gallery-card">
-                           <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
                                 alt="Restaurant seating" />
                         </figure>
-
+            
                         <figure class="gallery-card">
-                           <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
                                 alt="Restaurant seating" />
                         </figure>
-
+            
                     </div>
-
+            
                 </div>
-
+            
             </section>
+
+            <!-- Image Modal -->
+            <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true"
+                aria-label="Property image gallery">
+            
+                <div class="modal-overlay"></div>
+            
+                <div class="modal-content">
+            
+                    <button class="modal-close" id="modalClose" aria-label="Close image gallery">&times;</button>
+            
+                    <div class="modal-gallery" id="desktopGallery"></div>
+            
+                    <!-- mobile slider -->
+                    <div class="mobile-slider">
+            
+                        <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous image">&#10094;</button>
+            
+                        <div class="slider-wrapper">
+                            <img id="sliderImage" src="" alt="Property Image">
+                        </div>
+            
+                        <button class="slider-btn next-btn" id="nextBtn" aria-label="Next image">&#10095;</button>
+            
+                        <div class="image-counter" id="imageCounter">
+                            1 / 1
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
+            </div>
 
             <section class="hotel-tabs">
 
@@ -221,9 +262,9 @@
                                 Cana, A Luxury Collection Adult All-Inclusive Resort is located in Cap Cana, a
                                 private gated community retreat inside Punta Cana. Cap Cana is made up of
                                 30,000 acres of flawless beaches
+                                
                             </p>
-
-                            <a href="#" class="show-more-btn">Show more</a>
+ <a href="#" class="show-more-btn">Show more</a>
                         </article>
 
                         <!-- Amenities -->
@@ -471,6 +512,8 @@
 
     </main>
 
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/description.js"></script>
 </body>
 
 </html>
