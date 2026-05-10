@@ -123,7 +123,7 @@ ul li a {
 
 /* right side form */
 
-
+/* 
 .main-body-right-container {
 
 
@@ -290,6 +290,373 @@ ul li a {
 
 .form-checkout p {
     font-size: 0.8rem;
+} */
+
+
+
+/* RIGHT SIDE FORM */
+
+.main-body-right-container {
+
+    width: 22%;
+    padding-top: 6rem;
+    position: fixed;
+    top: 4rem;
+    right: 2rem;
+}
+
+.right-side-form-container {
+    width: 100%;
+}
+
+.right-side-form {
+
+    max-width: 18rem;
+
+    background-color: white;
+
+    border-radius: 1.5rem;
+
+    padding: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.4rem;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-header h2 {
+
+    text-align: center;
+
+    font-size: 1.4rem;
+
+    color: #333;
+}
+
+/* HIDDEN INPUT */
+
+#hotel-date-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.form-date-boxes {
+
+    display: flex;
+
+    gap: 1rem;
+}
+
+.form-date-box {
+
+    flex: 1;
+
+    border: 1px solid rgba(194, 173, 173, 0.418);
+
+    border-radius: 0.5rem;
+
+    padding: 0.7rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    cursor: pointer;
+}
+
+.date-label {
+
+    font-size: 0.75rem;
+
+    color: #777;
+
+    font-weight: 600;
+}
+
+.date-value-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.date-value-wrapper p {
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+
+.form-date-available {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    background-color: #d9f8e8;
+
+    padding: 0.7rem;
+
+    border-radius: 0.5rem;
+
+    font-size: 0.8rem;
+}
+
+.form-date-available i {
+    color: green;
+}
+
+/* PRICE */
+
+.form-price {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.form-price-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+#price-per-day {
+
+    font-size: 0.9rem;
+
+    color: #555;
+}
+
+#total-price {
+
+    font-size: 1rem;
+
+    font-weight: bold;
+}
+
+
+.form-availabity-button {
+
+    background-color: rgb(255, 123, 0);
+
+    border: none;
+
+    color: white;
+
+    padding: 0.9rem;
+
+    border-radius: 2rem;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-availabity-button:hover {
+    opacity: 0.9;
+}
+
+
+.form-redirect {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.4rem;
+}
+
+.redirect-text {
+
+    font-size: 0.75rem;
+
+    color: #777;
+}
+
+.brand-name {
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: #003580;
+}
+
+.brand-name span {
+    color: #0071c2;
+}
+
+
+.form-para p {
+
+    text-align: center;
+
+    font-size: 0.8rem;
+
+    color: #555;
+}
+
+
+.form-contact {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    font-style: normal;
+}
+
+
+.form-hot-deal {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.4rem;
+
+    background-color: #fff1be;
+
+    padding: 0.7rem;
+
+    border-radius: 0.5rem;
+
+    font-size: 0.8rem;
+}
+
+.form-hot-deal i {
+    color: orange;
+}
+
+
+.form-checkout {
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding-top: 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+.form-checkout p {
+
+    font-size: 0.8rem;
+
+    color: #444;
+}
+
+
+.hotel-datepicker {
+
+    margin-top: 1rem;
+
+    width: 100%;
+}
+
+.date-picker-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.date-picker-modal.active {
+    display: flex;
+}
+
+.date-picker-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.date-picker-panel {
+    position: relative;
+    z-index: 1;
+    width: min(42rem, 100%);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.date-picker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.date-picker-header h3 {
+    font-size: 1.25rem;
+    color: #222;
+}
+
+.date-picker-close {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 50%;
+    background: #f1f1f1;
+    color: #222;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.date-picker-calendar .datepicker,
+.date-picker-calendar .hotel-datepicker {
+    width: 100%;
+    margin-top: 0;
+}
+
+body.date-modal-open {
+    overflow: hidden;
 }
 
 
@@ -837,5 +1204,3 @@ body.modal-open {
     color: #555;
     line-height: 1.7;
 }
-
-

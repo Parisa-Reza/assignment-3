@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.12.4/dist/css/hotel-datepicker.min.css">
 </head>
 
 <body>
@@ -447,94 +448,133 @@
 
         </section>
 
-        <!-- main section right-->
+
         <section class="main-body-right-container">
 
-            <div class="right-side-form">
+    <aside class="right-side-form-container">
 
-                <div>
-                    <h2>Check Villa Availability</h2>
-                </div>
+        <form class="right-side-form" id="villa-booking-form">
 
+            <header class="booking-header">
+                <h2>Check Villa Availability</h2>
+            </header>
+
+            <!-- Date Picker -->
+            <div class="booking-date-wrapper">
+
+                <!-- Hidden input for HotelDatepicker -->
+                <input type="text" id="hotel-date-input" readonly>
 
                 <div class="form-date-boxes">
-                    <div class="form-date-box">
-                        <p>Jun 26</p>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </div>
 
-                    <div class="form-date-box">
-                        <p>Jun 29</p>
-                        <i class="fa-solid fa-angle-down"></i>
+                    <label class="form-date-box">
+                        <span class="date-label">Check-In</span>
+                        <div class="date-value-wrapper">
+                            <p id="checkin-date">Select</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </label>
 
-                    </div>
+                    <label class="form-date-box">
+                        <span class="date-label">Check-Out</span>
+                        <div class="date-value-wrapper">
+                            <p id="checkout-date">Select</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </label>
+
                 </div>
-
-
-                <div class="form-date-available">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <p>Dates selected are available</p>
-                </div>
-
-
-                <div class="form-price">
-
-                    <div class="form-price-info" id="price-per-day">
-                        <p> Price Per Night</p>
-                        <p> USD $600</p>
-                    </div>
-                    <div class="form-price-info" id="total-price">
-                        <p> Total Price</p>
-                        <p> USD $600</p>
-                    </div>
-                </div>
-
-
-
-                <div>
-                    <button class="form-availabity-button">
-                        Check Availabilty
-                    </button>
-                </div>
-
-
-                <div class="form-redirect">
-                    <p class="redirect-text">You will be redirected to</p>
-                    <p class="brand-name">Booking <span>.com</span></p>
-                </div>
-
-                <div class="form-para">
-                    <p>Non enim amet diam morbi sed nunc</p>
-                    <p>Euismod sit suspendisse at mauris integ</p>
-                </div>
-
-                <div class="form-contact">
-                    <i class="fa-solid fa-phone"></i>
-                    <h2>+1 (888) 999-9999</h2>
-                </div>
-
-
-                <div class="form-hot-deal">
-                    <i class="fa-solid fa-fire"></i>
-                    <p>Hot deal-It has been viewd 8 times today</p>
-                </div>
-
-                <div class="form-checkout">
-
-                    <p>
-                        Not the right fit? Check out our other properties in <u>Bayahibe Hotels</u>
-                    </p>
-                    <i class="fa-solid fa-house"></i>
-                </div>
-
             </div>
 
-        </section>
+            <div class="form-date-available">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Dates selected are available</p>
+            </div>
+
+            <!-- Pricing -->
+            <section class="form-price">
+
+                <div class="form-price-info" id="price-per-day">
+                    <p>Price Per Night</p>
+                    <p id="night-price">USD $2026</p>
+                </div>
+
+                <div class="form-price-info" id="total-price">
+                    <p>Total Price</p>
+                    <p id="total-price-value">USD $0</p>
+                </div>
+
+            </section>
+
+            <!-- Submit -->
+            <button type="submit" class="form-availabity-button">
+                Check Availability
+            </button>
+
+            <div class="form-redirect">
+                <p class="redirect-text">You will be redirected to</p>
+                <p class="brand-name">Booking <span>.com</span></p>
+            </div>
+
+            <section class="form-para">
+                <p>Non enim amet diam morbi sed nunc</p>
+                <p>Euismod sit suspendisse at mauris integ</p>
+            </section>
+
+            <address class="form-contact">
+                <i class="fa-solid fa-phone"></i>
+                <h2>+1 (888) 999-9999</h2>
+            </address>
+
+            <div class="form-hot-deal">
+                <i class="fa-solid fa-fire"></i>
+                <p>Hot deal - It has been viewed 8 times today</p>
+            </div>
+
+            <footer class="form-checkout">
+
+                <p>
+                    Not the right fit?
+                    Check out our other properties in
+                    <u>Bayahibe Hotels</u>
+                </p>
+
+                <i class="fa-solid fa-house"></i>
+
+            </footer>
+
+        </form>
+
+        <div class="date-picker-modal" id="datePickerModal" role="dialog" aria-modal="true" aria-hidden="true"
+            aria-label="Select check-in and check-out dates">
+            <div class="date-picker-overlay" id="datePickerOverlay"></div>
+
+            <div class="date-picker-panel">
+                <div class="date-picker-header">
+                    <h3>Select dates</h3>
+                    <button class="date-picker-close" id="datePickerClose" type="button"
+                        aria-label="Close date picker">&times;</button>
+                </div>
+
+                <div class="date-picker-calendar" id="datePickerCalendar"></div>
+            </div>
+        </div>
+
+    </aside>
+
+</section>
+
+
 
     </main>
 
     <script src="scripts/gallery.js"></script>
     <script src="scripts/description.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fecha@4.2.3/lib/fecha.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.12.4/dist/js/hotel-datepicker.min.js"></script>
+
+<script src="scripts/datePicker.js"></script>
 </body>
 
 </html>
