@@ -121,176 +121,7 @@ ul li a {
 }
 
 
-/* right side form */
 
-/* 
-.main-body-right-container {
-
-
-    width: 20%;
-    padding-top: 6rem;
-    position: fixed;
-    top: 4rem;
-    right: 0;
-
-}
-
-.right-side-form {
-    max-width: 15rem;
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 2.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.form-date-boxes {
-    display: flex;
-    gap: 1rem;
-    max-width: 100%;
-}
-
-.form-date-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    border: 1px solid rgba(194, 173, 173, 0.418);
-}
-
-.form-date-available {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #c9f4fd;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-    gap: 0.2rem;
-    font-size: 0.8rem;
-    padding-right: 4rem;
-
-
-
-}
-
-.form-date-available .fa-solid {
-    color: rgb(46, 204, 46);
-}
-
-
-
-
-.form-price {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.form-price-info {
-    display: flex;
-    font-size: 0.8rem;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-    color: #004403;
-}
-
-#price-per-day {
-    font-size: 0.8rem;
-}
-
-#total-price {
-    font-size: 1rem;
-}
-
-
-.form-availabity-button {
-    background-color: rgb(255, 123, 0);
-    border-radius: 1rem;
-    padding: 0.7rem 3rem;
-    font-size: 1rem;
-    color: white;
-    border: none;
-}
-
-
-.form-redirect {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.redirect-text {
-    font-size: 0.7rem;
-    color: #6b6b6b;
-    margin: 0;
-}
-
-.brand-name {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #003580;
-    margin: 0;
-}
-
-.brand-name span {
-    color: #0071c2;
-}
-
-.form-para {
-    margin: 0.5rem;
-}
-
-.form-para p {
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.form-contact {
-    display: flex;
-    gap: 0.6rem;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.form-hot-deal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffe9a0;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-    gap: 0.3rem;
-    font-size: 0.8rem;
-
-
-
-}
-
-.form-hot-deal .fa-solid {
-    color: rgb(226, 128, 1)
-}
-
-.form-checkout {
-    border-top: 1px solid #6b6b6b36;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.form-checkout p {
-    font-size: 0.8rem;
-} */
 
 
 
@@ -299,8 +130,8 @@ ul li a {
 .main-body-right-container {
 
     width: 22%;
-    padding-top: 6rem;
-    position: fixed;
+    padding: 6rem;
+    /* position: fixed; */
     top: 4rem;
     right: 2rem;
 }
@@ -716,10 +547,12 @@ body.date-modal-open {
 /* gallery section */
 
 
-.gallery-section, .about-section,.highlights-section {
+.gallery-section,
+.about-section,
+.highlights-section {
     padding: 2rem 1rem;
     max-width: 75rem;
-  
+
 }
 
 .gallery-grid {
@@ -744,31 +577,31 @@ body.date-modal-open {
 }
 
 .gallery-button {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
 
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-      padding: 10px 14px;
-      border-radius: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
 
-      background: rgba(0, 0, 0, 0.45);
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
 
-      backdrop-filter: blur(4px);
-    }
+    backdrop-filter: blur(4px);
+}
 
-    .gallery-button svg {
-      width: 16px;
-      height: 16px;
-      fill: white;
-    }
+.gallery-button svg {
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
 
 .gallery-side {
     display: grid;
@@ -829,7 +662,7 @@ body.date-modal-open {
     border: none;
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
 
     font-size: 1.5rem;
@@ -917,7 +750,7 @@ body.date-modal-open {
     border: none;
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
 
     font-size: 1.5rem;
@@ -941,7 +774,7 @@ body.date-modal-open {
 
     transform: translateX(-50%);
 
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
 
     padding: 0.5rem 1rem;
@@ -1001,8 +834,9 @@ body.modal-open {
 /* about section */
 
 
-.about-container ,.highlights-container{
-   
+.about-container,
+.highlights-container {
+
     background-color: #f5f5f5;
     border-radius: 1.5rem;
     padding: 2rem;
@@ -1130,8 +964,6 @@ body.modal-open {
 }
 
 
-/* resort highlights */
-
 .highlights-section-title {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
@@ -1177,7 +1009,7 @@ body.modal-open {
     gap: 1.5rem;
 }
 
- .highlights-cards-wrapper article {
+.highlights-cards-wrapper article {
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
@@ -1203,4 +1035,167 @@ body.modal-open {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.7;
+}
+
+
+/* property section */
+
+
+.nearby-properties-section {
+    max-width: 1400px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.section-header p {
+    color: #666;
+}
+
+/* dropdown */
+
+.property-filter select {
+    padding: 0.9rem 3rem;
+    border-radius: 0.7rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.property-filter select:focus,
+.property-filter select:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* properties grid */
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+
+.property-card {
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.property-image-wrapper {
+    position: relative;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.property-image-wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.price-tag {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+
+    background-color: #fff;
+    padding: 0.6rem 1rem;
+
+    border-radius: 0.5rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+.property-content {
+    padding: 1rem;
+}
+
+.property-type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.7rem;
+
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.property-title {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.7rem;
+
+    line-height: 1.4;
+}
+
+.property-amenities {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    margin-bottom: 0.7rem;
+}
+
+.property-location {
+    color: #555;
+    font-size: 0.9rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0a58ca;
+}
+
+.availability-btn {
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+
+    background-color: #f78b00;
+    color: #fff;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.availability-btn:hover {
+    background-color: #dd7900;
+}
+
+.loader {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 3rem 0;
 }

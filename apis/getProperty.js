@@ -3,9 +3,9 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-app.get("/", (req, res) => {
-  res.send("APIIIII is running");
-});
+// app.get("/", (req, res) => {
+//   res.send("APIIIII is running");
+// });
 app.get("/get-property", (req, res) => {
   const {
     "most-popular": mostPopular,

@@ -14,8 +14,10 @@ app.use((req, res, next) => {
 // Mount property API routes
 app.use(require("./apis/getProperty.js"));
 app.use(require("./apis/getImages.js"));
-app.use(express.static(path.join(__dirname)));
 
+// here serving all files inside the public folder directly to the browser.
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
