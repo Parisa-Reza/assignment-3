@@ -40,6 +40,7 @@ async function fetchProperties(sortType = "most-popular") {
         }
 
         renderProperties(data.Items);
+        applyFavoritesUI();
 
     } catch (error) {
 
@@ -77,6 +78,14 @@ function renderProperties(properties) {
             <article class="property-card">
 
                 <figure class="property-image-wrapper">
+
+                    <div class="property-icons">
+                    <button class="icon-btn message-btn"><i class="fa-solid fa-comment-dots"></i></button>
+                    <button class="icon-btn map-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    <button class="icon-btn favorite-btn" data-id="${item.ID || ''}">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    </div>
 
                     <img
                         src="${imageUrl}"
@@ -185,3 +194,95 @@ window.addEventListener("resize", () => {
 
     }, 500);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const propertiesGrid = document.getElementById("propertiesGrid");
+
+    const STORAGE_KEY = "my_favorite_properties";
+
+    function getFavorites() {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    }
+
+    function saveFavorites(favs) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
+    }
+
+
+
+    function toggleFavorite(btn) {
+        const propertyId = btn.getAttribute("data-id");
+
+        if (!propertyId) return; // prevent undefined bugs
+
+        let favorites = getFavorites();
+
+        const index = favorites.indexOf(propertyId);
+
+        const icon = btn.querySelector("i");
+
+        if (index > -1) {
+            favorites.splice(index, 1);
+            btn.classList.remove("active");
+            icon.classList.replace("fa-solid", "fa-regular");
+            icon.style.color = "";
+        } else {
+            favorites.push(propertyId);
+            btn.classList.add("active");
+            icon.classList.replace("fa-regular", "fa-solid");
+            icon.style.color = "red";
+        }
+
+        saveFavorites(favorites);
+    }
+
+
+    // event delegation
+    propertiesGrid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.favorite-btn');
+        if (!btn) return;
+
+        e.preventDefault();
+        toggleFavorite(btn);
+    });
+
+    // restore UI after render
+    window.applyFavoritesUI = () => {
+        const favorites = getFavorites();
+
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+            const id = btn.dataset.id;
+            const icon = btn.querySelector('i');
+
+            if (favorites.includes(id)) {
+                btn.classList.add('active');
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+                icon.style.color = 'red';
+            }
+        });
+    };
+
+});
+
+
+
+function applyFavoritesUI() {
+    const favorites = getFavorites();
+
+    document.querySelectorAll(".favorite-btn").forEach(btn => {
+        const id = btn.getAttribute("data-id");
+        const icon = btn.querySelector("i");
+
+        if (!id) return;
+
+        if (favorites.includes(id)) {
+            btn.classList.add("active");
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            icon.style.color = "red";
+        }
+    });
+}

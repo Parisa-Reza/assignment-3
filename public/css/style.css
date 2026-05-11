@@ -1199,3 +1199,86 @@ body.modal-open {
     font-size: 1.2rem;
     padding: 3rem 0;
 }
+
+
+.property-image-wrapper {
+    position: relative; 
+}
+
+.property-icons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Active State for Heart */
+.favorite-btn.active {
+    background: white;
+    color: #ff4b4b; 
+}
+
+.favorite-btn.active i {
+    font-weight: 900; 
+}
+
+.property-image-wrapper {
+    position: relative; 
+}
+
+.property-icons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Active State for Heart */
+.favorite-btn.active {
+    background: white;
+    color: #ff4b4b; 
+}
+
+.favorite-btn.active i {
+    font-weight: 900; 
+}
