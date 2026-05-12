@@ -85,7 +85,6 @@ async function updateMapMarkers() {
   const propertyCards = document.querySelectorAll(".property-card");
   
   if (propertyCards.length === 0) {
-    console.log("No properties to display on map");
     return;
   }
 

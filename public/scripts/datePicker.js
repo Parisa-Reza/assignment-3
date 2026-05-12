@@ -48,8 +48,7 @@ if (
         autoClose: false,
         moveBothMonths: true,
         showTopbar: true,
-        preventContainerClose: true,
-        onSelectRange: updateSelectedDates
+        preventContainerClose: true
     });
 
     dateBoxes.forEach((box) => {
@@ -64,6 +63,7 @@ if (
         }
 
         if (e.target.closest(".datepicker__submit-button") && getSelectedRange()) {
+            updateSelectedDates();
             closeDatePickerModal();
         }
     });
