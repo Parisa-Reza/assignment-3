@@ -216,7 +216,7 @@ Create a `.env` file in the root directory.
 
 ```env
 GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-PORT=3000
+
 ```
 
 ---
@@ -227,7 +227,7 @@ PORT=3000
 ```bash
 npm run dev
 ```
-
+PORT=3000
 ```bash
 http://localhost:3000/
 ```
