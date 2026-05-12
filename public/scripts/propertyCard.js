@@ -75,7 +75,7 @@ function renderProperties(properties) {
 
         /* CARD */
         const card = `
-            <article class="property-card">
+            <article class="property-card" data-latitude="${geo.Lat}" data-longitude="${geo.Lng}">
 
                 <figure class="property-image-wrapper">
 
