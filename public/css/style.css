@@ -118,6 +118,7 @@ ul li a {
 .main-body {
     background-color: #c9f4fd;
     display: flex;
+    flex-direction: column;
 }
 
 
@@ -127,13 +128,20 @@ ul li a {
 
 /* RIGHT SIDE FORM */
 
-.main-body-right-container {
+.main-body-first {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
 
+.main-body-right-container {
     width: 22%;
-    padding: 6rem;
-    /* position: fixed; */
+    padding: 4rem;
+
+    position: sticky;
     top: 4rem;
-    right: 2rem;
+
+    height: fit-content;
 }
 
 .right-side-form-container {
@@ -1093,10 +1101,12 @@ body.modal-open {
 /* Properties Container with Map */
 .properties-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2rem;
     align-items: stretch;
 }
+
+
 
 .properties-map-wrapper {
     display: flex;
@@ -1308,3 +1318,5 @@ body.modal-open {
 .favorite-btn.active i {
     font-weight: 900; 
 }
+
+

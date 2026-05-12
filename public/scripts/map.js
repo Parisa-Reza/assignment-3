@@ -45,7 +45,7 @@ function initMap() {
   const defaultCenter = { lat: 30.224107, lng: -85.887897 };
 
   map = new google.maps.Map(mapContainer, {
-    zoom: 20,
+    zoom: 12,
     center: defaultCenter,
     mapTypeControl: true,
     fullscreenControl: true,
